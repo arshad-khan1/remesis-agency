@@ -4,39 +4,14 @@ import { Button } from "@/components/ui/Button";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FeatureCard } from "@/components/ui/FeatureCard";
+import { HomeHero } from "@/components/ui/Home/Hero";
 
 export default function Home() {
   return (
     <Layout>
       <div className="w-full max-w-7xl px-4 py-16 sm:px-8 md:px-10">
         {/* Hero Section */}
-        <section className="mb-24">
-          <div
-            className="flex min-h-[480px] flex-col items-center justify-center gap-6 rounded-xl border border-primary/50 bg-cover bg-center bg-no-repeat p-6 text-center shadow-lg shadow-primary/20 md:gap-8 md:p-10"
-            style={{
-              backgroundImage: `linear-gradient(
-                rgba(25, 16, 34, 0.8) 0%,
-                rgba(25, 16, 34, 0.95) 100%
-              ),
-              url('https://lh3.googleusercontent.com/aida-public/AB6AXuCP5uyUGwPIK8MAj_e3wEgSu0unPbvfShtRh7-VVSkOTQCiSKyCR7SInfDeYiEicuRuDGGcf0n1bB-E_BDBTLVPnXbP6Y2D9FmPVKbOMnHbBj4OC-LCKuaTak8bgtabTzsaKjqLEBeaE3k_7PUAh6038V5PdAQpgNaHgRgBheBsJyxUJZCfronuVgJjT4TeJMpcUxwou9zDUVSq3FePbD47RrNIKpHfEAixHmrtX579HaWrdgudk1cRElKqoQ8EYZLZnKNxHe44Jqo0')`
-            }}
-          >
-            <div className="flex max-w-3xl flex-col gap-4">
-              <h1 className="text-4xl font-black leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl">
-                We Build Digital Experiences That Convert
-              </h1>
-              <h2 className="text-base font-normal leading-normal text-gray-300 sm:text-lg">
-                Our agency is dedicated to creating innovative and effective
-                solutions for our clients, driving growth and engagement
-                through cutting-edge design and strategy.
-              </h2>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button size="lg">Let's Talk</Button>
-              <Button variant="secondary" size="lg">See Our Work</Button>
-            </div>
-          </div>
-        </section>
+        <HomeHero />
 
         {/* Services Section */}
         <section className="mb-24">
@@ -72,8 +47,8 @@ export default function Home() {
               </h2>
               <p className="text-base font-normal leading-normal text-gray-400">
                 We combine creativity with technology to deliver results that
-                matter. Our transparent process and expert team are dedicated
-                to your success from start to finish.
+                matter. Our transparent process and expert team are dedicated to
+                your success from start to finish.
               </p>
               <div className="mt-4 flex flex-col gap-6">
                 <FeatureCard
@@ -113,11 +88,11 @@ export default function Home() {
                 Ready to Grow Your Business?
               </h2>
               <p className="max-w-xl text-gray-300">
-                Let's work together to create something amazing. Contact us
+                Let&apos;s work together to create something amazing. Contact us
                 today for a free, no-obligation proposal.
               </p>
             </div>
-            <Button size="lg" className="flex-shrink-0">
+            <Button size="lg" className="shrink-0">
               Get Your Free Proposal
             </Button>
           </div>

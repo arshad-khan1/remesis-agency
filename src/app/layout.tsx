@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "Agency - Digital Experiences That Convert",
@@ -20,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} font-display bg-background-dark text-[#E0E0E0] antialiased`}
+        className="font-display bg-background-dark text-[#E0E0E0] antialiased"
       >
         {children}
       </body>
