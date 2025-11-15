@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { HomeHero } from "@/components/ui/Home/Hero";
 import CoreServices from "@/components/ui/Home/CoreServices";
 import { PartnerWithUs } from "@/components/ui/Home/PartnerWithUs";
-import { CallToAction } from "@/components/ui/Home/CallToAction";
+import { HomeCTA } from "@/components/ui/Home/HomeCTA";
 import { WhatTheySay } from "@/components/ui/Home/WhatTheySay";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <CoreServices />
         <WhatTheySay />
         <PartnerWithUs />
-        <CallToAction />
+        <HomeCTA />
 
       </div>
     </Layout>

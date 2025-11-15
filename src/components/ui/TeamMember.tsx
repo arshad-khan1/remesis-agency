@@ -21,7 +21,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, imageUrl, alt }) =>
         />
         <div className="absolute inset-0 bg-primary/20 opacity-0 transition-opacity group-hover:opacity-100" />
       </div>
-      <h3 className="text-xl font-bold text-white">{name}</h3>
+      <h3 className="text-xl font-bold gradient-text">{name}</h3>
       <p className="text-sm font-medium text-primary">{role}</p>
     </div>
   );
