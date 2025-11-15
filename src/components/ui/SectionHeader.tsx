@@ -1,33 +1,50 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { ButtonShootingStarBorder } from './ShinyButton';
 
 interface SectionHeaderProps {
   title: string;
   subtitle?: string;
   centered?: boolean;
   className?: string;
+  badgeText?: string;
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ 
   title, 
   subtitle, 
   centered = true, 
-  className 
+  className,
+  badgeText,
 }) => {
   return (
-    <div className={cn(
-      'mb-8 flex flex-col',
-      centered ? 'items-center text-center' : 'items-start text-left',
-      className
-    )}>
-      <h2 className="text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl">
-        {title}
-      </h2>
-      {subtitle && (
-        <p className="mt-2 max-w-2xl text-gray-400">
-          {subtitle}
-        </p>
+    <div
+      className={cn(
+        'mb-8 flex flex-col gap-4',
+        centered ? 'items-center text-center' : 'items-start text-left',
+        className
       )}
+    >
+      <div
+        className={cn(
+          'flex w-full max-w-3xl flex-col gap-5',
+          centered ? 'mx-auto' : 'mx-0'
+        )}
+      >
+        {badgeText && (
+          <div className={cn('w-fit', centered ? 'mx-auto' : '')}>
+            <ButtonShootingStarBorder text={badgeText} />
+          </div>
+        )}
+        <h2 className="gradient-text text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="text-base font-normal leading-normal text-gray-300 sm:text-lg">
+            {subtitle}
+          </p>
+        )}
+      </div>
     </div>
   );
 };
