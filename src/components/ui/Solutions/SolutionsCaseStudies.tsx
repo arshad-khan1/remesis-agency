@@ -1,5 +1,6 @@
 import { CaseStudiesCard } from "../CaseStudiesCard";
 import { SectionHeader } from "../SectionHeader";
+import { AnimatedGrid } from "../AnimatedSection";
 
 const caseStudies = [
   {
@@ -36,11 +37,11 @@ export function SolutionsCaseStudies() {
         title="Our Track Record of Success"
         subtitle="Explore a sample of the outcomes we deliver across product design, growth, and brand-building initiatives."
       />
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <AnimatedGrid className="grid grid-cols-1 gap-6 md:grid-cols-3" stagger={0.2}>
         {caseStudies.map((study) => (
           <CaseStudiesCard key={study.title} study={study} />
         ))}
-      </div>
+      </AnimatedGrid>
     </section>
   );
 }

@@ -6,6 +6,7 @@ import {
   AccordionContent,
 } from "../../../../components/motion-primitives/accordion";
 import { SectionHeader } from "../SectionHeader";
+import { AnimatedGrid } from "../AnimatedSection";
 
 const faqs = [
   {
@@ -54,23 +55,25 @@ export function ContactFAQ() {
         className="flex w-full flex-col gap-4 divide-y divide-zinc-200 dark:divide-zinc-700"
         transition={{ duration: 0.2, ease: "easeInOut" }}
       >
-        {faqs.map((faq) => (
-          <AccordionItem
-            key={faq.value}
-            value={faq.value}
-            className="py-4 px-4 group overflow-hidden rounded-2xl border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur-md bg-linear-to-bl from-[#140A28] via-[#090313] to-[#000101]"
-          >
-            <AccordionTrigger className="w-full text-left text-zinc-950 dark:text-zinc-50">
-              <div className="flex items-center justify-between text-lg gradient-text">
-                <div>{faq.question}</div>
-                <ChevronUp className="h-8 w-8 text-[#5F19E4] transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50 cursor-pointer" />
-              </div>
-            </AccordionTrigger>
-            <AccordionContent>
-              <p className="text-zinc-400 text-md">{faq.answer}</p>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
+        <AnimatedGrid className="flex flex-col gap-4" stagger={0.1}>
+          {faqs.map((faq) => (
+            <AccordionItem
+              key={faq.value}
+              value={faq.value}
+              className="py-4 px-4 group overflow-hidden rounded-2xl border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur-md bg-linear-to-bl from-[#140A28] via-[#090313] to-[#000101]"
+            >
+              <AccordionTrigger className="w-full text-left text-zinc-950 dark:text-zinc-50">
+                <div className="flex items-center justify-between text-lg gradient-text">
+                  <div>{faq.question}</div>
+                  <ChevronUp className="h-8 w-8 text-[#5F19E4] transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50 cursor-pointer" />
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-zinc-400 text-md">{faq.answer}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </AnimatedGrid>
       </Accordion>
     </section>
   );

@@ -1,5 +1,6 @@
 import { SectionHeader } from '../SectionHeader';
 import { AboutCard } from './AboutCard';
+import { AnimatedGrid } from '../AnimatedSection';
 
 const guidingPrinciples = [
   {
@@ -23,11 +24,11 @@ export function AboutGuidingPrinciples() {
         title="Guiding Principles"
         subtitle="We're driven by a shared purpose to push boundaries and deliver excellence. Our mission is to empower brands through creative strategy, while our vision is to redefine the landscape of digital interaction."
       />
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <AnimatedGrid className="grid grid-cols-1 gap-6 md:grid-cols-2" stagger={0.2}>
         {guidingPrinciples.map((principle) => (
           <AboutCard key={principle.title} {...principle} />
         ))}
-      </div>
+      </AnimatedGrid>
     </section>
   );
 }

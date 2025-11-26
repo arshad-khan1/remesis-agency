@@ -1,6 +1,8 @@
 import { Button } from "../Button";
 import { Card } from "../Card";
 import { SectionHeader } from "../SectionHeader";
+import { AnimatedSection, AnimatedGrid } from "../AnimatedSection";
+import { FadeIn } from "../FadeIn";
 
 const contactDetails = [
   {
@@ -49,126 +51,130 @@ export function ContactFormSection() {
         title="Reach us to create an impactful solution"
       />
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <Card
-          variant="feature"
-          className="p-8 bg-linear-to-bl from-[#140A28] via-[#090313] to-[#000101]"
-        >
-          <h2 className="mb-6 text-2xl font-bold gradient-text">
-            Send us a message
-          </h2>
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <AnimatedSection delay={0.2}>
+          <Card
+            variant="feature"
+            className="p-8 bg-linear-to-bl from-[#140A28] via-[#090313] to-[#000101]"
+          >
+            <h2 className="mb-6 text-2xl font-bold gradient-text">
+              Send us a message
+            </h2>
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="firstName"
+                    className="mb-2 block text-sm font-medium text-white/80"
+                  >
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="John"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="lastName"
+                    className="mb-2 block text-sm font-medium text-white/80"
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
               <div>
                 <label
-                  htmlFor="firstName"
+                  htmlFor="email"
                   className="mb-2 block text-sm font-medium text-white/80"
                 >
-                  First Name
+                  Email
                 </label>
                 <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
+                  type="email"
+                  id="email"
+                  name="email"
                   className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="John"
+                  placeholder="john@example.com"
                 />
               </div>
               <div>
                 <label
-                  htmlFor="lastName"
+                  htmlFor="company"
                   className="mb-2 block text-sm font-medium text-white/80"
                 >
-                  Last Name
+                  Company (Optional)
                 </label>
                 <input
                   type="text"
-                  id="lastName"
-                  name="lastName"
+                  id="company"
+                  name="company"
                   className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="Doe"
+                  placeholder="Your Company"
                 />
               </div>
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-2 block text-sm font-medium text-white/80"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="john@example.com"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="company"
-                className="mb-2 block text-sm font-medium text-white/80"
-              >
-                Company (Optional)
-              </label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Your Company"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="service"
-                className="mb-2 block text-sm font-medium text-white/80"
-              >
-                Service Interested In
-              </label>
-              <select
-                id="service"
-                name="service"
-                className="w-full rounded-lg border border-white/20 px-4 py-3 bg-[#090313] text-zinc-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select a service
-                </option>
-                <option value="web-development">Web Development</option>
-                <option value="ui-ux-design">UX/UI Design</option>
-                <option value="digital-marketing">Digital Marketing</option>
-                <option value="brand-strategy">Brand Strategy</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="mb-2 block text-sm font-medium text-white/80"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Tell us about your project..."
-              />
-            </div>
-            <Button variant="purple" size="lg" className="w-full">
-              Send Message
-            </Button>
-          </form>
-        </Card>
+              <div>
+                <label
+                  htmlFor="service"
+                  className="mb-2 block text-sm font-medium text-white/80"
+                >
+                  Service Interested In
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  className="w-full rounded-lg border border-white/20 px-4 py-3 bg-[#090313] text-zinc-300 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  defaultValue=""
+                >
+                  <option value="" disabled>
+                    Select a service
+                  </option>
+                  <option value="web-development">Web Development</option>
+                  <option value="ui-ux-design">UX/UI Design</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="brand-strategy">Brand Strategy</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-sm font-medium text-white/80"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-white/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+              <Button variant="purple" size="lg" className="w-full">
+                Send Message
+              </Button>
+            </form>
+          </Card>
+        </AnimatedSection>
 
         <div className="space-y-8">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold gradient-text">
-              Contact Information
-            </h2>
-            <div className="space-y-6">
+            <FadeIn delay={0.4}>
+              <h2 className="text-2xl font-bold gradient-text">
+                Contact Information
+              </h2>
+            </FadeIn>
+            <AnimatedGrid className="space-y-6" stagger={0.15}>
               {contactDetails.map(({ icon, title, description }) => (
                 <div key={title} className="flex items-start gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
@@ -182,7 +188,7 @@ export function ContactFormSection() {
                   </div>
                 </div>
               ))}
-            </div>
+            </AnimatedGrid>
           </div>
         </div>
       </div>

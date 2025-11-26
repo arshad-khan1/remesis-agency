@@ -1,5 +1,6 @@
 import { SectionHeader } from "../SectionHeader";
 import { ServiceCard } from "../ServiceCard";
+import { AnimatedGrid } from "../AnimatedSection";
 
 export default function CoreServices() {
   return (
@@ -9,7 +10,7 @@ export default function CoreServices() {
         subtitle="We offer a complete suite of services to help your business thrive in the digital landscape."
         badgeText="Services"
       />
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <AnimatedGrid className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.15}>
         <ServiceCard
           icon="code"
           title="Web Design & Development"
@@ -25,7 +26,7 @@ export default function CoreServices() {
           title="Branding & Identity"
           description="Building memorable brand identities that resonate with your audience."
         />
-      </div>
+      </AnimatedGrid>
     </section>
   );
 }

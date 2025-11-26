@@ -1,5 +1,6 @@
 import { SectionHeader } from '../SectionHeader';
 import { AboutCard } from './AboutCard';
+import { AnimatedGrid } from '../AnimatedSection';
 
 const coreValues = [
   {
@@ -41,11 +42,11 @@ export function AboutCoreValues() {
   return (
     <section className="space-y-12">
       <SectionHeader badgeText='Values' title="Our Core Values" className="pb-6" />
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <AnimatedGrid className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.1}>
         {coreValues.map((value) => (
           <AboutCard key={value.title} {...value} />
         ))}
-      </div>
+      </AnimatedGrid>
     </section>
   );
 }

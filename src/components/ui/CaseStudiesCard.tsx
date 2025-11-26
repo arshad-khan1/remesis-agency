@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from "motion/react";
+
 interface CaseStudy {
   client: string;
   title: string;
@@ -11,12 +15,14 @@ interface CaseStudiesCardProps {
 
 export const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({ study }) => {
   return (
-    <article
+    <motion.article
       key={study.title}
       className="group flex flex-col gap-5 rounded-3xl border border-primary/40 bg-linear-to-bl from-[#140A28] via-[#090313] to-[#000101] p-6 shadow-[0_0_0_1px_rgba(124,58,237,0.2)] backdrop-blur-md"
+      whileHover={{ y: -8, scale: 1.01 }}
+      transition={{ duration: 0.3 }}
     >
       <div
-        className="aspect-video w-full rounded-2xl bg-cover bg-center bg-no-repeat"
+        className="aspect-video w-full rounded-2xl bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.02]"
         style={{
           backgroundImage: `url('${study.imageUrl}')`,
         }}
@@ -39,6 +45,6 @@ export const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({ study }) => {
           </span>
         </a>
       </div>
-    </article>
+    </motion.article>
   );
 };

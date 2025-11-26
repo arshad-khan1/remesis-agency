@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from "motion/react";
+
 export const BenefitsBanner = () => {
   return (
     <div
@@ -5,18 +9,26 @@ export const BenefitsBanner = () => {
       style={{ boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)" }}
     >
       <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-12">
-        <div className="flex items-center gap-2">
-            <svg
+        <motion.div 
+          className="flex items-center gap-2"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.0, duration: 0.5 }}
+        >
+            <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="url(#gradient1)"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-check-icon lucide-check text-purple-700"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
             >
               <defs>
                 <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -25,23 +37,31 @@ export const BenefitsBanner = () => {
                 </linearGradient>
               </defs>
               <path d="M20 6 9 17l-5-5" />
-            </svg>
+            </motion.svg>
           <span className="text-md font-semibold text-white gradient-text">
             Grow Like a PRO
           </span>
-        </div>
-        <div className="flex items-center gap-2">
-            <svg
+        </motion.div>
+        <motion.div 
+          className="flex items-center gap-2"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
+        >
+            <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="url(#gradient2)"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-check-icon lucide-check text-purple-700"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
             >
               <defs>
                 <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -50,13 +70,18 @@ export const BenefitsBanner = () => {
                 </linearGradient>
               </defs>
               <path d="M20 6 9 17l-5-5" />
-            </svg>
+            </motion.svg>
           <span className="text-md font-semibold text-white gradient-text">
             Save up to: $20,000/mo
           </span>
-        </div>
-        <div className="flex items-center gap-2">
-            <svg
+        </motion.div>
+        <motion.div 
+          className="flex items-center gap-2"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.4, duration: 0.5 }}
+        >
+            <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -67,6 +92,9 @@ export const BenefitsBanner = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               className="lucide lucide-check-icon lucide-check text-purple-700"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ delay: 1.6, duration: 0.8, ease: "easeOut" }}
             >
               <defs>
                 <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -75,11 +103,11 @@ export const BenefitsBanner = () => {
                 </linearGradient>
               </defs>
               <path d="M20 6 9 17l-5-5" />
-            </svg>
+            </motion.svg>
           <span className="text-md font-semibold text-white gradient-text">
             Cancel Anytime
           </span>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

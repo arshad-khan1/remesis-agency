@@ -1,5 +1,6 @@
 import { SectionHeader } from '../SectionHeader';
 import { TeamMember } from '../TeamMember';
+import { AnimatedGrid } from '../AnimatedSection';
 
 const teamMembers = [
   {
@@ -33,11 +34,11 @@ export function AboutTeam() {
         title="Meet the Team"
         subtitle="The brilliant minds behind our success. We're a team of strategists, designers, and developers united by a passion for creating amazing work."
       />
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <AnimatedGrid className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3" stagger={0.15}>
         {teamMembers.map((member) => (
           <TeamMember key={member.name} {...member} />
         ))}
-      </div>
+      </AnimatedGrid>
     </section>
   );
 }
