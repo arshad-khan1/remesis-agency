@@ -7,36 +7,34 @@ import { FadeIn } from "../FadeIn";
 export function PartnerWithUs() {
   return (
     <section>
-      <SectionHeader badgeText="Benefits" title="Partner With Us" />
+      <SectionHeader badgeText="Partner With Ramesys" title="Partner With Ramesys" />
       <AnimatedSection className="grid grid-cols-1 items-center gap-12 rounded-xl border border-primary/50 p-8 lg:grid-cols-2 lg:gap-16 lg:p-12 bg-linear-to-bl from-[#140A28] via-[#090313] to-[#000101]">
         <div className="flex flex-col gap-4">
           <FadeIn delay={0.2} duration={0.6}>
             <h2 className="gradient-text text-2xl font-bold leading-tight tracking-tight text-white md:text-4xl">
-              What are the benefits?
+              Partner With Ramesys
             </h2>
           </FadeIn>
           <FadeIn delay={0.4} duration={0.6}>
             <p className="text-base font-normal leading-normal text-gray-400">
-              We combine creativity with technology to deliver results that
-              matter. Our transparent process and expert team are dedicated to
-              your success from start to finish.
+              We collaborate with startups, growing businesses, and enterprises looking for a long-term technology partner—not just a service provider. From engineering products to scaling systems and growth, we work as an extension of your team.
             </p>
           </FadeIn>
           <AnimatedGrid className="mt-4 flex flex-col gap-6" stagger={0.15}>
             <FeatureCard
-              icon="bar_chart"
-              title="Data-Driven Results"
-              description="We leverage analytics to make informed decisions and optimize for success."
+              icon="architecture"
+              title="Long-term, scalable technology solutions"
+              description="We design systems that handle growth in users, features, and data without breaking."
             />
             <FeatureCard
-              icon="groups"
-              title="Expert Team"
-              description="Our team consists of industry veterans passionate about digital excellence."
+              icon="engineering"
+              title="Engineering-led decisions, not shortcuts"
+              description="We prioritise clean architecture, performance, and stability before visual polish or shortcuts."
             />
             <FeatureCard
-              icon="sync_alt"
-              title="Transparent Process"
-              description="Stay informed with clear communication and regular updates throughout your project."
+              icon="trending_up"
+              title="A team that grows with your business"
+              description="Partner with a team that understands architecture, scalability, and real-world business constraints."
             />
           </AnimatedGrid>
         </div>

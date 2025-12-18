@@ -5,9 +5,9 @@ export function HomeCTA() {
     <section>
       <CallToAction
         variant="home"
-        title="Ready to unlock the next level?"
-        description="Talk with us today to skyrocket your business to the next level!"
-        primaryAction={{ label: "Book a Call", variant: "purple", size: "lg" }}
+        title="Looking for a technology partner, not just a vendor?"
+        description="Schedule a call to explore a structured, code-first approach to your next build."
+        primaryAction={{ label: "Schedule a Call", variant: "purple", size: "lg" }}
       />
     </section>
   );

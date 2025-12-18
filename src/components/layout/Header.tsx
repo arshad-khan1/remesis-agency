@@ -45,8 +45,8 @@ const Header = () => {
               </defs>
             </svg>
           </div>
-          <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-white">
-            Agency
+          <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-white uppercase">
+            Ramesys
           </h2>
         </Link>
 
@@ -68,7 +68,7 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-          <Button size="sm">Get a Quote</Button>
+          <Button variant="purple" size="sm">Get a Quote</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -99,7 +99,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="mt-2">Get a Quote</Button>
+            <Button variant="purple" size="sm" className="mt-2">Get a Quote</Button>
           </nav>
         </div>
       )}

@@ -7,8 +7,8 @@ export function SolutionsHero() {
       <div className="mx-auto flex min-h-[420px] max-w-3xl flex-col items-center justify-center gap-6">
         <SectionHeader
           badgeText="Solutions"
-          title="Innovative Solutions for Digital Growth"
-          subtitle="We craft cutting-edge digital experiences that elevate your brand and drive results. Discover our strategic approach to solving your most complex challenges."
+          title="What We Deliver"
+          subtitle="Ramesys provides engineering-led services focused on building scalable websites, applications, software systems, and data-driven digital growth solutions."
         />
         {/* <Button variant="purple" size="lg">Explore Our Services</Button> */}
       </div>

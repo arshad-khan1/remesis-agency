@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Agency - Digital Experiences That Convert",
-  description: "We build innovative digital experiences that drive growth and engagement through cutting-edge design and strategy.",
+  title: "Ramesys - Digital Systems Engineered for Scale",
+  description: "We build custom-coded digital systems, applications, and software designed to scale, perform, and integrate seamlessly with your business.",
 };
 
 export default function RootLayout({

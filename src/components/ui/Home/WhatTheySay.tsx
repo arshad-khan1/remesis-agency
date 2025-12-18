@@ -9,9 +9,31 @@ const testimonials = [
     imageSrc: 'https://images.pexels.com/photos/25482494/pexels-photo-25482494.jpeg',
     comment: (
       <>
-        <strong className="text-white">BOOSTFACTOR</strong> has been great to work with. Their ability to develop and
+        <strong className="text-white">Ramesys</strong> has been great to work with. Their ability to develop and
         transform my work has exceeded my expectations. Their communication with me has been prompt and clear. I would{' '}
         <strong className="text-white">highly recommend</strong> them.
+      </>
+    ),
+  },
+  {
+    name: 'Sarah Jenkins',
+    role: 'CTO, TechFlow',
+    rating: 5,
+    imageSrc: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg',
+    comment: (
+      <>
+        The team at <strong className="text-white">Ramesys</strong> understands architecture like no other agency. They didn&apos;t just build a website; they engineered a <strong className="text-white">scalable system</strong> that handles our growth effortlessly.
+      </>
+    ),
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Founder, GrowthLoop',
+    rating: 5,
+    imageSrc: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg',
+    comment: (
+      <>
+        Switching to a <strong className="text-white">code-first approach</strong> with Ramesys was the best decision for our startup. No more page builder bloat—just pure performance and <strong className="text-white">clean code</strong>.
       </>
     ),
   },

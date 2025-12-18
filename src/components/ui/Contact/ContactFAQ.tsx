@@ -10,40 +10,52 @@ import { AnimatedGrid } from "../AnimatedSection";
 
 const faqs = [
   {
-    value: "services",
-    question: "What services do you offer?",
+    value: "companies",
+    question: "What kind of companies do you work with?",
     answer:
-      "We provide Growth Marketing, Copywriting, Ads Management, Webflow Development, SEO, and Ads Creatives.",
+      "We work with startups, growing businesses, and established organisations that need scalable, custom-built digital systems—not template-based solutions.",
   },
   {
-    value: "subscription",
-    question: "How does your subscription model work?",
+    value: "templates",
+    question: "Do you use templates or page builders for websites?",
     answer:
-      "Choose a plan that fits your needs, submit requests as you go, and receive ongoing updates with a predictable monthly cost.",
+      "No. Our websites are custom-coded from the ground up, allowing better performance, security, flexibility, and long-term scalability.",
   },
   {
-    value: "custom-projects",
-    question: "Can I opt for a custom project instead of a subscription?",
+    value: "technologies",
+    question: "What technologies do you use?",
     answer:
-      "Absolutely. We tailor standalone engagements for launches, campaigns, or specialized initiatives outside of subscription plans.",
+      "We select technologies based on project requirements, scalability, and performance. Our focus is always on clean architecture, structured code, and production-ready systems rather than fixed tools.",
+  },
+  {
+    value: "scale",
+    question: "Can your websites and applications scale as our business grows?",
+    answer:
+      "Yes. Scalability is built into our architecture from the start, allowing systems to handle increased users, features, and data without rework.",
+  },
+  {
+    value: "marketing",
+    question: "Do you only provide development, or also digital marketing?",
+    answer:
+      "We provide both. Our digital marketing services are data-driven and tightly integrated with the systems we build, ensuring measurable and sustainable growth.",
+  },
+  {
+    value: "approach",
+    question: "How do you approach a new project?",
+    answer:
+      "We begin by understanding business goals, workflows, and technical needs, then design the system architecture before moving into development and deployment.",
   },
   {
     value: "support",
-    question: "Do you offer training and ongoing support?",
+    question: "Do you offer long-term support and maintenance?",
     answer:
-      "Yes, we equip your team with handoff sessions, process documentation, and continued support whenever you need it.",
+      "Yes. We provide ongoing support, enhancements, and system improvements to ensure stability and performance over time.",
   },
   {
-    value: "results",
-    question: "How long does it take to see results from your services?",
+    value: "started",
+    question: "How do we get started with Ramesys?",
     answer:
-      "Timelines vary by scope, but most clients begin seeing measurable traction within the first 4–8 weeks of collaboration.",
-  },
-  {
-    value: "switching",
-    question: "Can I switch between subscription and project-based services?",
-    answer:
-      "You can move between models at any time. We keep scope transparent so you can flex resources based on your roadmap.",
+      "You can start by booking a call with our team. We’ll discuss your requirements and recommend the right technical approach.",
   },
 ];
 

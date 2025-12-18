@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
         <div className="flex items-center justify-between text-sm">
           <p className="text-gray-400 md:justify-self-start">
-            © 2025 Agency. All Rights Reserved.
+            © 2025 Ramesys. All Rights Reserved.
           </p>
 
           <Link
@@ -38,12 +38,16 @@ const Footer = () => {
                 />
               </svg>
             </span>
-            <span className="text-2xl font-semibold tracking-widest">
-              Agency
+            <span className="text-2xl font-semibold tracking-widest uppercase">
+              Ramesys
             </span>
           </Link>
 
           <div className="flex flex-col items-center gap-4 text-sm md:flex-row md:justify-end md:text-right">
+            <div className="flex flex-col items-end gap-1 text-gray-400 mr-4">
+              <p>b1, 2nd floor, kali krishna abasan,</p>
+              <p>galasara road, bally, howrah.</p>
+            </div>
             <div className="flex items-center gap-5 text-gray-400">
               <Link
                 href="https://www.instagram.com"
@@ -86,10 +90,10 @@ const Footer = () => {
               </Link>
             </div>
             <Link
-              href="mailto:contact@agency.io"
+              href="mailto:contact@ramesys.com"
               className="text-gray-300 transition hover:text-white"
             >
-              contact@agency.io
+              contact@ramesys.com
             </Link>
           </div>
         </div>

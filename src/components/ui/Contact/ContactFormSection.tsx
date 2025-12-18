@@ -10,23 +10,23 @@ const contactDetails = [
     title: "Office Address",
     description: (
       <p className="text-white/70">
-        123 Business Street
+        b1, 2nd floor, kali krishna abasan,
         <br />
-        Suite 100
+        galasara road, bally,
         <br />
-        City, State 12345
+        howrah.
       </p>
     ),
   },
   {
     icon: "phone",
     title: "Phone",
-    description: <p className="text-white/70">+1 (555) 123-4567</p>,
+    description: <p className="text-white/70">+91 1234567890</p>, // Placeholder for "use my contact" if not provided, but I'll use a placeholder for now as I don't have the user's phone number.
   },
   {
     icon: "email",
     title: "Email",
-    description: <p className="text-white/70">hello@agency.com</p>,
+    description: <p className="text-white/70">contact@ramesys.com</p>,
   },
   {
     icon: "schedule",
@@ -138,10 +138,10 @@ export function ContactFormSection() {
                   <option value="" disabled>
                     Select a service
                   </option>
-                  <option value="web-development">Web Development</option>
-                  <option value="ui-ux-design">UX/UI Design</option>
-                  <option value="digital-marketing">Digital Marketing</option>
-                  <option value="brand-strategy">Brand Strategy</option>
+                  <option value="website-engineering">Website Engineering</option>
+                  <option value="application-development">Application Development</option>
+                  <option value="custom-software-systems">Custom Software Systems</option>
+                  <option value="digital-marketing-growth">Digital Marketing & Growth</option>
                   <option value="other">Other</option>
                 </select>
               </div>

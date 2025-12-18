@@ -6,25 +6,30 @@ export default function CoreServices() {
   return (
     <section>
       <SectionHeader
-        title="Our Core Services"
-        subtitle="We offer a complete suite of services to help your business thrive in the digital landscape."
+        title="What We Build"
+        subtitle="Custom-coded digital systems designed to scale, perform, and integrate seamlessly with your business."
         badgeText="Services"
       />
-      <AnimatedGrid className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.15}>
+      <AnimatedGrid className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4" stagger={0.15}>
         <ServiceCard
-          icon="code"
-          title="Web Design & Development"
-          description="Crafting beautiful, high-performing websites tailored to your brand."
+          icon="language"
+          title="Website Engineering"
+          description="Custom-coded websites built with structured frontend and backend architecture, optimised for performance, security, and long-term scalability."
+        />
+        <ServiceCard
+          icon="devices_other"
+          title="Application Development"
+          description="Web and mobile applications developed with modular logic, clean data flow, and systems that scale as features and users grow."
+        />
+        <ServiceCard
+          icon="home_repair_service"
+          title="Custom Software Systems"
+          description="Business software, dashboards, and internal tools engineered around workflows, integrations, and maintainable codebases."
         />
         <ServiceCard
           icon="campaign"
-          title="Digital Marketing"
-          description="Driving targeted traffic and leads through strategic online campaigns."
-        />
-        <ServiceCard
-          icon="palette"
-          title="Branding & Identity"
-          description="Building memorable brand identities that resonate with your audience."
+          title="Digital Marketing & Growth"
+          description="Performance-focused digital marketing is built on data, tracking systems, and platforms designed to convert traffic into measurable growth."
         />
       </AnimatedGrid>
     </section>

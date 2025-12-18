@@ -10,7 +10,7 @@ export const HomeHero = () => {
   return (
     <section>
       <div className="flex flex-col items-center justify-center text-center gap-6 md:gap-8 lg:gap-10">
-        <SectionHeader badgeText="Looking for solutions?" title="We Build Digital Experiences That Convert" subtitle="Crafting solutions that move brands forward" />
+        <SectionHeader badgeText="Looking for solutions?" title="Code or Convenience?" subtitle="We choose clean architecture and performance over shortcuts and page builders. Engineered in code to stay fast, secure, and scalable as you grow." />
         <FadeIn delay={0.6} duration={0.5}>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <motion.div
@@ -18,7 +18,7 @@ export const HomeHero = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Button variant="purple" size="lg">
-                Let&apos;s Talk
+                Build With Code
               </Button>
             </motion.div>
           </div>

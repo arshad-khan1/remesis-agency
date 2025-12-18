@@ -5,10 +5,10 @@ export function AboutCTA() {
     <section>
       <CallToAction
         variant="home"
-        title="Ready to unlock the next level?"
-        description="Talk with us today to skyrocket your business to the next level!"
-        primaryAction={{ label: "Book a Call", variant: "purple", size: "lg" }}
-        secondaryAction={ { label: "See our work", variant: "purple", size: "lg" }}
+        title="Build It Right"
+        description="Ramesys works with businesses that value clean systems, long-term thinking, and technology built to scale. If you’re planning something serious, we’re ready to engineer it with you."
+        primaryAction={{ label: "Start with a conversation", variant: "purple", size: "lg" }}
+        // secondaryAction={ { label: "Build with clarity", variant: "purple", size: "lg" }}
       />
     </section>
   );

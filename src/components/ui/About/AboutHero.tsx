@@ -15,9 +15,8 @@ export function AboutHero() {
       <div className="mx-auto flex min-h-[420px] max-w-3xl flex-col items-center justify-center gap-6">
         <SectionHeader
           badgeText="About Us"
-          title="Who we are"
-          subtitle="We are the architects of the digital future. A creative agency dedicated to building
-          innovative and impactful experiences that connect brands with their audiences."
+          title="Built on Engineering"
+          subtitle="Ramesys is a technology company focused on building scalable digital systems through clean code, strong architecture, and practical execution."
         />
       </div>
     </section>

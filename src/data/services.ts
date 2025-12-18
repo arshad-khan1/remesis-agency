@@ -14,327 +14,119 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "web-development",
+    slug: "website-engineering",
     icon: "language",
-    title: "Web Development",
+    title: "Website Engineering",
     description:
-      "Designing and engineering high-performing, responsive websites that reflect your brand and deliver measurable results.",
+      "Custom-coded websites built with structured frontend and backend architecture, optimised for performance, security, and long-term scalability.",
     longDescription:
-      "We architect full-stack web solutions tailored to your business objectives, pairing modern frameworks with robust infrastructure to ensure speed, security, and scalability.",
+      "We design and develop custom-coded websites built for performance, security, and scalability. No templates, no page builders—just engineered web development.",
     subServices: [
       {
         title: "Custom Website Development",
         description:
-          "Build bespoke marketing and corporate websites with pixel-perfect accuracy and optimized performance.",
+          "No templates, no page builders. Clean, custom-coded solutions.",
       },
       {
-        title: "Content Management Systems",
-        description:
-          "Implement flexible CMS solutions like headless CMS or WordPress tailored to your workflows.",
+        title: "Frontend & Backend Architecture",
+        description: "Structured development for both client and server side.",
       },
       {
-        title: "Progressive Web Apps",
+        title: "Performance & Security",
         description:
-          "Deliver app-like experiences on the web with offline support, push notifications, and installability.",
+          "Optimised for speed and built with security-first principles.",
       },
       {
-        title: "Website Optimization",
+        title: "Scalable Web Builds",
         description:
-          "Refine existing properties with accessibility audits, performance tuning, and SEO enhancements.",
-      },
-      {
-        title: "Maintenance & Support",
-        description:
-          "Keep your web presence healthy with proactive monitoring, updates, and feature enhancements.",
+          "Business and corporate sites designed for long-term growth.",
       },
     ],
   },
   {
-    slug: "app-development",
+    slug: "application-development",
     icon: "devices_other",
-    title: "App Development",
+    title: "Application Development",
     description:
-      "Building secure, scalable applications across web, mobile, and desktop platforms with seamless user experiences.",
+      "Web and mobile applications developed with modular logic, clean data flow, and systems that scale as features and users grow.",
     longDescription:
-      "From concept validation to post-launch iterations, we develop applications that perform flawlessly and delight users on every device.",
+      "We build web and mobile applications that function as real software systems. Everything is modular, maintainable, and production-ready.",
     subServices: [
       {
-        title: "Cross-Platform Mobile Apps",
+        title: "Custom Web Applications",
         description:
-          "Ship iOS and Android experiences faster with shared codebases powered by React Native or Flutter.",
+          "Bespoke applications tailored to your specific business needs.",
       },
       {
-        title: "Product Prototyping",
-        description:
-          "Rapidly validate product ideas with clickable prototypes and MVPs that attract users and stakeholders.",
+        title: "Scalable Backend Logic",
+        description: "Robust server-side systems with structured data flow.",
+      },
+      {
+        title: "API-Based Systems",
+        description: "Feature-driven architecture built around resilient APIs.",
+      },
+      {
+        title: "Modular Architecture",
+        description: "Applications designed to grow in users and complexity.",
       },
     ],
   },
   {
-    slug: "design-and-branding",
-    icon: "design_services",
-    title: "Design & Branding",
+    slug: "custom-software-systems",
+    icon: "home_repair_service",
+    title: "Custom Software Systems",
     description:
-      "Crafting cohesive visual identities and intuitive interfaces that resonate with your audience and strengthen brand loyalty.",
+      "Business software, dashboards, and internal tools engineered around workflows, integrations, and maintainable codebases.",
     longDescription:
-      "Our designers translate your vision into compelling visuals and experiences that differentiate your brand in competitive markets.",
+      "We engineer internal tools and business software around how organisations actually work. This is where business logic meets clean code.",
     subServices: [
       {
-        title: "Brand Identity Systems",
+        title: "Internal Platforms",
         description:
-          "Define logos, typography, color palettes, and visual guidelines that tell a consistent brand story.",
-      },
-    ],
-  },
-  {
-    slug: "digital-marketing-and-advertising",
-    icon: "campaign",
-    title: "Digital Marketing and Advertising",
-    description:
-      "Creating data-driven campaigns that amplify reach, capture qualified leads, and maximize your return on ad spend.",
-    longDescription:
-      "We connect strategy, content, and paid media to build repeatable growth engines aligned with your revenue goals.",
-    subServices: [
-      {
-        title: "Performance Campaigns",
-        description:
-          "Plan, launch, and optimize paid campaigns across search, social, and display channels.",
-      },
-      {
-        title: "Content Marketing",
-        description:
-          "Produce editorial calendars, blog content, and assets that engage and educate your audiences.",
-      },
-      {
-        title: "Email & Lifecycle Marketing",
-        description:
-          "Nurture leads with segmentation, automation, and personalized messaging flows.",
-      },
-      {
-        title: "SEO & SEM",
-        description:
-          "Improve discoverability with keyword research, technical optimization, and search ads.",
-      },
-      {
-        title: "Social Media Management",
-        description:
-          "Grow communities through channel strategy, content creation, and analytics tracking.",
-      },
-    ],
-  },
-  {
-    slug: "data-and-analytics",
-    icon: "query_stats",
-    title: "Data and Analytics",
-    description:
-      "Transforming raw data into actionable insights with modern analytics stacks, dashboards, and performance intelligence.",
-    longDescription:
-      "We unify fragmented data sources and surface dashboards that empower better, faster decisions across your organization.",
-    subServices: [
-      {
-        title: "Analytics Implementation",
-        description:
-          "Configure tracking plans and instrumentation across web, mobile, and product touchpoints.",
-      },
-      {
-        title: "Data Warehousing",
-        description:
-          "Design scalable, secure data pipelines and warehouses for single sources of truth.",
-      },
-      {
-        title: "Business Intelligence Dashboards",
-        description:
-          "Build interactive dashboards in tools like Looker, Power BI, and Tableau for on-demand insights.",
-      },
-      {
-        title: "Advanced Insights & Forecasting",
-        description:
-          "Apply statistical modeling and forecasting to reveal growth opportunities and risks.",
-      },
-    ],
-  },
-  {
-    slug: "ai-automation-and-chatbots",
-    icon: "smart_toy",
-    title: "AI, Automation & Chatbots",
-    description:
-      "Implementing intelligent automations and conversational assistants that optimize operations and elevate customer engagement.",
-    longDescription:
-      "We blend AI, machine learning, and process design to automate repetitive tasks and deliver responsive customer experiences.",
-    subServices: [
-      {
-        title: "AI Strategy & Roadmapping",
-        description:
-          "Identify the highest-impact AI opportunities and craft realistic implementation plans.",
+          "Dashboards and admin panels designed for operational efficiency.",
       },
       {
         title: "Workflow Automation",
         description:
-          "Automate manual processes with integrations, RPA, and no-code tooling.",
+          "Reduce manual effort with custom-built automation systems.",
       },
-      {
-        title: "Conversational Interfaces",
-        description:
-          "Deploy chatbots and virtual assistants that handle support, onboarding, and lead capture.",
-      },
-    ],
-  },
-  {
-    slug: "technical-services",
-    icon: "home_repair_service",
-    title: "Technical Services",
-    description:
-      "Providing integrations, API development, and ongoing technical support to keep your digital ecosystem running smoothly.",
-    longDescription:
-      "Our engineers extend and stabilize your technology stack with enterprise-grade integrations, automation, and managed services.",
-    subServices: [
       {
         title: "System Integrations",
-        description:
-          "Connect SaaS platforms, internal tools, and data sources through resilient integrations.",
+        description: "Seamlessly connect your business tools and data sources.",
       },
       {
-        title: "API Design & Development",
+        title: "Maintainable Codebases",
         description:
-          "Design, document, and maintain REST/GraphQL APIs that empower partners and product teams.",
-      },
-      {
-        title: "Legacy Modernization",
-        description:
-          "Refactor and upgrade legacy applications to modern frameworks and infrastructure.",
-      },
-      {
-        title: "Quality Assurance",
-        description:
-          "Implement automated testing suites and manual QA programs for reliable releases.",
-      },
-      {
-        title: "Security Hardening",
-        description:
-          "Conduct audits, vulnerability assessments, and remediation to protect critical systems.",
-      },
-      {
-        title: "Technical Documentation",
-        description:
-          "Produce clear developer guides and runbooks to align teams and accelerate onboarding.",
-      },
-      {
-        title: "Managed Services",
-        description:
-          "Provide tiered support plans, monitoring, and incident response for business continuity.",
-      },
-      {
-        title: "Training & Enablement",
-        description:
-          "Upskill internal teams with workshops, knowledge bases, and tailored enablement resources.",
+          "Software designed to reduce technical debt and last long-term.",
       },
     ],
   },
   {
-    slug: "ecommerce-and-business-tools",
-    icon: "shopping_cart",
-    title: "E-commerce & Business Tools",
+    slug: "digital-marketing-growth",
+    icon: "campaign",
+    title: "Digital Marketing & Growth",
     description:
-      "Delivering end-to-end commerce solutions with personalized shopping experiences and streamlined back-office workflows.",
+      "Performance-focused digital marketing is built on data, tracking systems, and platforms designed to convert traffic into measurable growth.",
     longDescription:
-      "We design omnichannel commerce journeys and implement operational systems that empower your teams to sell more efficiently.",
+      "Our marketing work is tightly connected to the systems we build—never disconnected from data or technology. Marketing at Ramesys is treated as a system.",
     subServices: [
       {
-        title: "Storefront Design & Build",
-        description:
-          "Launch immersive storefronts on Shopify, WooCommerce, or custom stacks.",
+        title: "Performance Marketing",
+        description: "Data-driven campaigns focused on measurable growth.",
       },
       {
-        title: "Subscription & Membership Platforms",
+        title: "SEO Engineering",
         description:
-          "Build recurring revenue engines with seamless billing and retention flows.",
+          "Search optimization built around site structure and code quality.",
       },
       {
-        title: "Marketplace Integrations",
-        description:
-          "Connect to Amazon, Etsy, and other marketplaces to broaden distribution.",
+        title: "Conversion Tracking",
+        description: "Advanced tracking systems to measure every touchpoint.",
       },
       {
-        title: "Product Information Management",
+        title: "Analytics-Driven Strategy",
         description:
-          "Centralize product catalogs with automated enrichment and syndication.",
-      },
-      {
-        title: "Order & Inventory Automation",
-        description:
-          "Sync orders, inventory, and fulfillment across channels for real-time visibility.",
-      },
-      {
-        title: "Payments & Checkout Optimization",
-        description:
-          "Reduce friction at checkout with optimized flows and global payment options.",
-      },
-      {
-        title: "Customer Loyalty Programs",
-        description:
-          "Design point-based and tiered loyalty programs that drive repeat purchases.",
-      },
-      {
-        title: "Business Operations Dashboards",
-        description:
-          "Monitor sales, customer behavior, and operational KPIs with unified dashboards.",
-      },
-    ],
-  },
-  {
-    slug: "cloud-and-devops",
-    icon: "cloud_sync",
-    title: "Cloud & DevOps",
-    description:
-      "Architecting cloud-native infrastructure with automated deployments, observability, and rock-solid reliability.",
-    longDescription:
-      "Our DevOps teams automate delivery pipelines and implement resilient cloud architectures tailored to your velocity and uptime needs.",
-    subServices: [
-      {
-        title: "Infrastructure as Code",
-        description:
-          "Provision repeatable cloud environments using Terraform, Pulumi, or CloudFormation.",
-      },
-      {
-        title: "CI/CD Pipelines",
-        description:
-          "Automate testing and deployments with pipelines that reduce risk and accelerate releases.",
-      },
-      {
-        title: "Observability & Monitoring",
-        description:
-          "Implement logging, tracing, and alerting strategies for proactive incident response.",
-      },
-      {
-        title: "Cloud Cost Optimization",
-        description:
-          "Optimize resource usage and spending with reserved capacity planning and automation.",
-      },
-    ],
-  },
-  {
-    slug: "consulting-and-strategy",
-    icon: "emoji_objects",
-    title: "Consulting & Strategy",
-    description:
-      "Partnering to shape your digital roadmap, prioritize investments, and realize transformational outcomes with confidence.",
-    longDescription:
-      "We collaborate with stakeholders to translate vision into tangible roadmaps, ensuring initiatives deliver business value.",
-    subServices: [
-      {
-        title: "Digital Transformation Roadmaps",
-        description:
-          "Align leadership around phased initiatives that modernize customer and employee experiences.",
-      },
-      {
-        title: "Product Strategy",
-        description:
-          "Define product-market fit, feature prioritization, and go-to-market plans grounded in research.",
-      },
-      {
-        title: "Innovation Workshops",
-        description:
-          "Facilitate stakeholder workshops to ideate, prototype, and evaluate new digital opportunities.",
+          "Marketing decisions driven by hard data, not assumptions.",
       },
     ],
   },

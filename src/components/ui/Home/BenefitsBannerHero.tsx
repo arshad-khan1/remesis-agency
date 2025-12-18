@@ -39,7 +39,7 @@ export const BenefitsBanner = () => {
               <path d="M20 6 9 17l-5-5" />
             </motion.svg>
           <span className="text-md font-semibold text-white gradient-text">
-            Grow Like a PRO
+            No Page Builders
           </span>
         </motion.div>
         <motion.div 
@@ -72,7 +72,7 @@ export const BenefitsBanner = () => {
               <path d="M20 6 9 17l-5-5" />
             </motion.svg>
           <span className="text-md font-semibold text-white gradient-text">
-            Save up to: $20,000/mo
+            Clean Codebase
           </span>
         </motion.div>
         <motion.div 
@@ -105,7 +105,7 @@ export const BenefitsBanner = () => {
               <path d="M20 6 9 17l-5-5" />
             </motion.svg>
           <span className="text-md font-semibold text-white gradient-text">
-            Cancel Anytime
+            Future-Ready Systems
           </span>
         </motion.div>
       </div>
