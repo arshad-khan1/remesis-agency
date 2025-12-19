@@ -6,7 +6,7 @@ import { SubServiceCard } from "@/components/ui/Solutions/SubServiceCard";
 import { getServiceBySlug, services } from "@/data/services";
 
 interface ServicePageProps {
-  params: { id: string } | Promise<{ id: string }>;
+  params: Promise<{ id: string }>;
 }
 
 export function generateStaticParams() {
