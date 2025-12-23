@@ -68,7 +68,9 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-          <Button variant="purple" size="sm">Get a Quote</Button>
+          <Link href="/quote">
+            <Button variant="purple" size="sm">Get a Quote</Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -99,7 +101,9 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="purple" size="sm" className="mt-2">Get a Quote</Button>
+            <Link href="/quote" onClick={() => setIsMenuOpen(false)}>
+              <Button variant="purple" size="sm" className="mt-2 w-full">Get a Quote</Button>
+            </Link>
           </nav>
         </div>
       )}

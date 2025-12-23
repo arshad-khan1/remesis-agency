@@ -3,19 +3,6 @@ import { ClientTestimonialCard } from '../ClientTestimonialCard';
 
 const testimonials = [
   {
-    name: 'Quinn Bell',
-    role: 'Product Founder',
-    rating: 5,
-    imageSrc: 'https://images.pexels.com/photos/25482494/pexels-photo-25482494.jpeg',
-    comment: (
-      <>
-        <strong className="text-white">Ramesys</strong> has been great to work with. Their ability to develop and
-        transform my work has exceeded my expectations. Their communication with me has been prompt and clear. I would{' '}
-        <strong className="text-white">highly recommend</strong> them.
-      </>
-    ),
-  },
-  {
     name: 'Sarah Jenkins',
     role: 'CTO, TechFlow',
     rating: 5,

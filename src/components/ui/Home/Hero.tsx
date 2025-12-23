@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 export const HomeHero = () => {
   return (
     <section>
-      <div className="flex flex-col items-center justify-center text-center gap-6 md:gap-8 lg:gap-10">
+      <div className="flex flex-col items-center justify-center text-center gap-6 md:gap-8 lg:gap-10 h-[calc(100vh-4rem)]">
         <SectionHeader badgeText="Looking for solutions?" title="Code or Convenience?" subtitle="We choose clean architecture and performance over shortcuts and page builders. Engineered in code to stay fast, secure, and scalable as you grow." />
         <FadeIn delay={0.6} duration={0.5}>
           <div className="flex flex-wrap items-center justify-center gap-4">

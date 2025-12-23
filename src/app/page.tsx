@@ -8,7 +8,7 @@ import { WhatTheySay } from "@/components/ui/Home/WhatTheySay";
 export default function Home() {
   return (
     <Layout>
-      <div className="w-full max-w-7xl px-4 py-16 sm:px-8 md:px-10 flex flex-col gap-60">
+      <div className="w-full max-w-7xl px-4 pb-16 sm:px-8 md:px-10 flex flex-col gap-60">
         {/* Hero Section */}
         <HomeHero />
         <CoreServices />

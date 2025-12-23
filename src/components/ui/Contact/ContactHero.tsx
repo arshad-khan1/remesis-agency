@@ -4,7 +4,7 @@ export function ContactHero() {
   return (
     <section>
       <div
-        className="flex min-h-[480px] flex-col items-center justify-center gap-6 rounded-3xl bg-cover bg-center bg-no-repeat p-6 md:gap-8"
+        className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-6 rounded-3xl bg-cover bg-center bg-no-repeat p-6 md:gap-8"
         // style={{
         //   backgroundImage: `linear-gradient(
         //     rgba(25, 16, 34, 0.85) 0%,

@@ -14,7 +14,7 @@ interface TeamMemberProps {
 const TeamMember: React.FC<TeamMemberProps> = ({ name, role, imageUrl, alt }) => {
   return (
     <motion.div 
-      className="group text-center"
+      className="group w-full max-w-[320px] text-center"
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3 }}
     >

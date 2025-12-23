@@ -53,7 +53,7 @@ export const services: Service[] = [
       "We build web and mobile applications that function as real software systems. Everything is modular, maintainable, and production-ready.",
     subServices: [
       {
-        title: "Custom Web Applications",
+        title: "Custom Web, Android and IOS Applications",
         description:
           "Bespoke applications tailored to your specific business needs.",
       },
