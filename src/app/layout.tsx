@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Ramesys - Digital Systems Engineered for Scale",
@@ -17,6 +18,7 @@ export default function RootLayout({
         className="font-display bg-background-dark text-[#E0E0E0] antialiased"
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
