@@ -23,19 +23,17 @@ const Header = () => {
     <header className="sticky top-0 z-50 flex items-center justify-center border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-8 md:px-10">
       <div className="flex w-full max-w-7xl items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="group flex items-center gap-4 text-white">
-          <div className="relative flex size-10 items-center justify-center">
-            {/* Square Light Beam Effect */}
-            <div className="absolute inset-0 bg-purple-500/20 blur-xl group-hover:bg-purple-500/40 transition-colors duration-500" />
-            <div className="relative flex size-8 items-center justify-center border border-white/20 bg-white/5 backdrop-blur-sm">
-              <span className="text-xl font-black tracking-tighter text-white">R</span>
-              {/* Beam lines */}
-              <div className="absolute -inset-px border border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
+        <Link href="/" className="group flex items-center text-white">
+          <div className="relative flex h-14 w-auto items-center justify-center">
+            {/* Prominent Shiny/Glow Effect */}
+            <div className="absolute inset-0 -z-10 bg-purple-500/60 blur-2xl group-hover:bg-purple-500/80 transition-all duration-500 rounded-full scale-150 animate-pulse" />
+            <div className="absolute inset-0 -z-10 bg-white/20 blur-xl group-hover:bg-white/40 transition-all duration-500 rounded-full scale-110" />
+            <img 
+              src="/logo.png" 
+              alt="Ramesys Logo" 
+              className="relative z-10 h-14 w-auto object-contain drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+            />
           </div>
-          <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-white uppercase">
-            Ramesys
-          </h2>
         </Link>
 
         {/* Desktop Navigation */}

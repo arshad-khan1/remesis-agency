@@ -20,24 +20,17 @@ const Footer = () => {
 
           <Link
             href="/"
-            className="mx-auto flex items-center gap-4 text-white transition hover:opacity-90 md:mx-0"
+            className="group mx-auto flex items-center gap-3 text-white transition hover:opacity-90 md:mx-0"
           >
-            <span className="flex size-12 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur">
-              <svg
-                aria-hidden="true"
-                className="size-6"
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clipRule="evenodd"
-                  d="M24 3 45 24 24 45 3 24 24 3Zm-3 30V15L12 24l9 9Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </span>
+            <div className="relative flex items-center justify-center">
+              {/* Prominent Shiny/Glow Effect */}
+              <div className="absolute inset-0 -z-10 bg-purple-500/50 blur-xl group-hover:bg-purple-500/70 transition-all duration-500 rounded-full scale-150" />
+              <img 
+                src="/logo.png" 
+                alt="Ramesys Logo" 
+                className="relative z-10 h-12 w-auto object-contain drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]"
+              />
+            </div>
             <span className="text-2xl font-semibold tracking-widest uppercase">
               Ramesys
             </span>
