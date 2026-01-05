@@ -130,6 +130,102 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    slug: "data-science",
+    icon: "analytics",
+    title: "Data Science",
+    description:
+      "Extracting insights from data using advanced statistical and computational techniques.",
+    longDescription:
+      "We help businesses leverage their data to make informed decisions and gain a competitive edge through advanced analytics and machine learning.",
+    subServices: [
+      {
+        title: "Predictive Analytics",
+        description: "Forecasting future trends based on historical data.",
+      },
+      {
+        title: "Machine Learning",
+        description: "Building intelligent systems that learn from data.",
+      },
+      {
+        title: "Data Visualization",
+        description: "Creating interactive dashboards to communicate insights.",
+      },
+    ],
+  },
+  {
+    slug: "seo",
+    icon: "search",
+    title: "SEO",
+    description:
+      "Optimizing your online presence to increase visibility and drive organic traffic.",
+    longDescription:
+      "Our SEO strategies are built on technical excellence and content relevance to ensure your business ranks where it matters.",
+    subServices: [
+      {
+        title: "Technical SEO",
+        description:
+          "Optimizing site structure and performance for search engines.",
+      },
+      {
+        title: "Content Strategy",
+        description:
+          "Creating valuable content that resonates with your audience.",
+      },
+      {
+        title: "Link Building",
+        description: "Establishing authority through high-quality backlinks.",
+      },
+    ],
+  },
+  {
+    slug: "domain",
+    icon: "domain",
+    title: "Domain",
+    description:
+      "Securing and managing your digital identity with reliable domain services.",
+    longDescription:
+      "We provide comprehensive domain management services to ensure your online presence is secure and professional.",
+    subServices: [
+      {
+        title: "Domain Registration",
+        description:
+          "Finding and securing the perfect domain for your business.",
+      },
+      {
+        title: "DNS Management",
+        description: "Reliable and secure DNS configuration.",
+      },
+      {
+        title: "Domain Security",
+        description:
+          "Protecting your domain from unauthorized transfers and threats.",
+      },
+    ],
+  },
+  {
+    slug: "more-services",
+    icon: "more_horiz",
+    title: "More services",
+    description:
+      "A wide range of additional technology and creative services tailored to your needs.",
+    longDescription:
+      "Beyond our core offerings, we provide various specialized services to support your business's unique requirements.",
+    subServices: [
+      {
+        title: "Cloud Solutions",
+        description: "Scalable and secure cloud infrastructure.",
+      },
+      {
+        title: "UI/UX Design",
+        description: "Creating intuitive and engaging user experiences.",
+      },
+      {
+        title: "Technical Consulting",
+        description: "Expert advice on technology strategy and implementation.",
+      },
+    ],
+  },
 ];
 
 const decodeSlug = (value: string) => {

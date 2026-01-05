@@ -65,7 +65,7 @@ export const ClientTestimonialCard: React.FC<ClientTestimonialCardProps> = ({
 
       <div className="relative z-10 flex flex-col items-center text-center">
         <motion.div 
-          className="mb-6 flex size-16 items-center justify-center rounded-full border border-white/15 bg-white/10 backdrop-blur"
+          className="mb-6 flex size-20 items-center justify-center rounded-full border border-white/15 bg-white/10 backdrop-blur overflow-hidden"
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : { scale: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "backOut" }}
@@ -73,9 +73,9 @@ export const ClientTestimonialCard: React.FC<ClientTestimonialCardProps> = ({
           <Image
             alt={imageAlt}
             src={imageSrc}
-            width={56}
-            height={56}
-            className="size-14 rounded-full object-cover"
+            width={80}
+            height={80}
+            className="size-full object-cover"
           />
         </motion.div>
 

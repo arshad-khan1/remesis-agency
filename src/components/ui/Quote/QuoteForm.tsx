@@ -38,7 +38,6 @@ export function QuoteForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Personal Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-white mb-4">Personal Details</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-white/70 mb-2">First Name</label>
@@ -92,7 +91,6 @@ export function QuoteForm() {
 
             {/* Project Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-white mb-4">Project Details</h3>
               <div>
                 <label htmlFor="projectType" className="block text-sm font-medium text-white/70 mb-2">Project Type</label>
                 <select
@@ -111,6 +109,49 @@ export function QuoteForm() {
                   <option value="other">Other</option>
                 </select>
               </div>
+              {formData.projectType && (
+                <div>
+                  <label htmlFor="subProject" className="block text-sm font-medium text-white/70 mb-2">Sub Project Selection</label>
+                  <select
+                    id="subProject"
+                    name="subProject"
+                    className="w-full bg-[#090313] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                    onChange={handleChange}
+                    defaultValue=""
+                  >
+                    <option value="" disabled>Select a sub project</option>
+                    {formData.projectType === 'web' && (
+                      <>
+                        <option value="corporate">Corporate Website</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="landing">Landing Page</option>
+                      </>
+                    )}
+                    {formData.projectType === 'app' && (
+                      <>
+                        <option value="mobile">Mobile App</option>
+                        <option value="web-app">Web Application</option>
+                        <option value="saas">SaaS Platform</option>
+                      </>
+                    )}
+                    {formData.projectType === 'software' && (
+                      <>
+                        <option value="erp">ERP System</option>
+                        <option value="crm">CRM Tool</option>
+                        <option value="automation">Workflow Automation</option>
+                      </>
+                    )}
+                    {formData.projectType === 'marketing' && (
+                      <>
+                        <option value="seo">SEO Optimization</option>
+                        <option value="ads">Paid Advertising</option>
+                        <option value="social">Social Media Growth</option>
+                      </>
+                    )}
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              )}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-white/70 mb-2">Budget Range</label>

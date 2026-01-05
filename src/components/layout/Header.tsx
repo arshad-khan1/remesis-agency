@@ -23,27 +23,15 @@ const Header = () => {
     <header className="sticky top-0 z-50 flex items-center justify-center border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-8 md:px-10">
       <div className="flex w-full max-w-7xl items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-4 text-white">
-          <div className="size-6">
-            <svg
-              fill="none"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clipPath="url(#clip0_6_330)">
-                <path
-                  clipRule="evenodd"
-                  d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_6_330">
-                  <rect fill="white" height="48" width="48" />
-                </clipPath>
-              </defs>
-            </svg>
+        <Link href="/" className="group flex items-center gap-4 text-white">
+          <div className="relative flex size-10 items-center justify-center">
+            {/* Square Light Beam Effect */}
+            <div className="absolute inset-0 bg-purple-500/20 blur-xl group-hover:bg-purple-500/40 transition-colors duration-500" />
+            <div className="relative flex size-8 items-center justify-center border border-white/20 bg-white/5 backdrop-blur-sm">
+              <span className="text-xl font-black tracking-tighter text-white">R</span>
+              {/* Beam lines */}
+              <div className="absolute -inset-px border border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
           </div>
           <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-white uppercase">
             Ramesys
