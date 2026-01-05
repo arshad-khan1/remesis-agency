@@ -10,7 +10,7 @@ const contactDetails = [
     title: "Office Address",
     description: (
       <p className="text-white/70">
-        b1, 2nd floor, kali krishna abasan,
+        B1, 2nd floor, kali krishna abasan,
         <br />
         galasara road, bally,
         <br />
