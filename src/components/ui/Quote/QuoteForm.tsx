@@ -12,20 +12,72 @@ export function QuoteForm() {
     email: '',
     company: '',
     projectType: '',
+    subProject: '',
     budget: '',
     timeline: '',
     description: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    setIsLoading(true);
+    setStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType: 'quote'
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({
+          type: "success",
+          message: "Quote request sent successfully! We'll get back to you soon.",
+        });
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          company: '',
+          projectType: '',
+          subProject: '',
+          budget: '',
+          timeline: '',
+          description: '',
+        });
+        // Clear select values manually if needed, but since they are controlled it's fine
+      } else {
+        setStatus({
+          type: "error",
+          message: data.error || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: "Failed to connect to the server. Please try again later.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -45,6 +97,7 @@ export function QuoteForm() {
                     type="text"
                     id="firstName"
                     name="firstName"
+                    value={formData.firstName}
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                     placeholder="John"
@@ -57,6 +110,7 @@ export function QuoteForm() {
                     type="text"
                     id="lastName"
                     name="lastName"
+                    value={formData.lastName}
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                     placeholder="Doe"
@@ -70,6 +124,7 @@ export function QuoteForm() {
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                   placeholder="john@example.com"
@@ -82,6 +137,7 @@ export function QuoteForm() {
                   type="text"
                   id="company"
                   name="company"
+                  value={formData.company}
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                   placeholder="Your Company"
                   onChange={handleChange}
@@ -96,10 +152,10 @@ export function QuoteForm() {
                 <select
                   id="projectType"
                   name="projectType"
+                  value={formData.projectType}
                   required
                   className="w-full bg-[#090313] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                   onChange={handleChange}
-                  defaultValue=""
                 >
                   <option value="" disabled>Select a project type</option>
                   <option value="web">Website Engineering</option>
@@ -115,9 +171,9 @@ export function QuoteForm() {
                   <select
                     id="subProject"
                     name="subProject"
+                    value={formData.subProject}
                     className="w-full bg-[#090313] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                     onChange={handleChange}
-                    defaultValue=""
                   >
                     <option value="" disabled>Select a sub project</option>
                     {formData.projectType === 'web' && (
@@ -158,9 +214,9 @@ export function QuoteForm() {
                   <select
                     id="budget"
                     name="budget"
+                    value={formData.budget}
                     className="w-full bg-[#090313] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                     onChange={handleChange}
-                    defaultValue=""
                   >
                     <option value="" disabled>Select budget</option>
                     <option value="<5k">Less than $5,000</option>
@@ -174,9 +230,9 @@ export function QuoteForm() {
                   <select
                     id="timeline"
                     name="timeline"
+                    value={formData.timeline}
                     className="w-full bg-[#090313] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
                     onChange={handleChange}
-                    defaultValue=""
                   >
                     <option value="" disabled>Select timeline</option>
                     <option value="1m">Less than 1 month</option>
@@ -194,6 +250,7 @@ export function QuoteForm() {
             <textarea
               id="description"
               name="description"
+              value={formData.description}
               required
               rows={5}
               className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors resize-none"
@@ -202,9 +259,27 @@ export function QuoteForm() {
             />
           </div>
 
+          {status.type && (
+            <div
+              className={`p-4 rounded-lg text-sm ${
+                status.type === "success"
+                  ? "bg-green-500/20 text-green-400 border border-green-500/50"
+                  : "bg-red-500/20 text-red-400 border border-red-500/50"
+              }`}
+            >
+              {status.message}
+            </div>
+          )}
+
           <div className="flex justify-end">
-            <Button variant="purple" size="lg" className="w-full md:w-auto px-12">
-              Request Quote
+            <Button 
+                variant="purple" 
+                size="lg" 
+                className="w-full md:w-auto px-12"
+                type="submit"
+                disabled={isLoading}
+            >
+              {isLoading ? 'Sending...' : 'Request Quote'}
             </Button>
           </div>
         </form>
